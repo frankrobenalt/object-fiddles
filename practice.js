@@ -4,7 +4,11 @@
 //Create an object called me. Give it a key of name with the value being your name, and another key of age with the value being your age. Then alert your name using dot notation.
 
   //Code here
-
+var me = {
+  name: 'Frank',
+  age: 24
+}
+alert(me.name);
 
 
 
@@ -19,7 +23,14 @@
 
   //Code here
 
-
+var favoriteThings = {
+  band: 'pink floyd',
+  food: 'hella fried chicken',
+  person: 'Alan Alda',
+  book: 'infinite jest',
+  movie: 'the fighter/citizen kane/hunt for the wilderpeople',
+  holiday: 'thanksgiving'
+}
 
 
 
@@ -29,7 +40,8 @@
 
   //Code here
 
-
+favoriteThings.car = 'jeep';
+favoriteThings.brand = 'nike';
 
 
 
@@ -38,7 +50,8 @@
   //Code here
 
 
-
+favoriteThings.food = 'Chicken Nuggets';
+favoriteThings.book = 'Harry Potter';
 
 
 //NEXT PROBLEM
@@ -56,8 +69,10 @@ that is named color, with the value being the color of your backpack.
 */
 
   //Code here
-
-
+var backPack = {};
+var item = 'firstPocket';
+backPack[item] = 'chapstick';
+backPack.color = 'blue';
 
 
 
@@ -66,7 +81,7 @@ that is named color, with the value being the color of your backpack.
 
   //Code here
 
- 
+ alert(backPack);
 
 /*
 You probably noticed that it just alerted [object Object].
@@ -76,7 +91,7 @@ Instead, console.log your whole backPack object and then check out the console.
 
   //Code here
 
-
+console.log(backPack);
 
 
 
@@ -98,7 +113,8 @@ var user2 = {
 
   //Code Here
 
-
+user2.name = 'Tyler S. McGinnis';
+user2.email = 'tyler.mcginnis@devmounta.in';
 
 
 
@@ -119,7 +135,7 @@ var user2 = {
 //Create an empty object called methodCollection.
 
   //Code Here
-
+var methodCollection = {};
 
 
 
@@ -130,8 +146,12 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
  */
 
   //Code Here
-
-
+methodCollection.alertHello = function () {
+  alert('hello');
+};
+methodCollection.logHello = function () {
+  console.log('hello');
+}
 
 
 
@@ -139,9 +159,9 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 
   //Code Here
 
+methodCollection.alertHello();
 
-
-
+methodCollection.logHello();
 
 
 
@@ -155,7 +175,13 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 
   //Code Here
 
-
+function makePerson (name, birthday, ssn) {
+  var newP = {};
+  newP.name = name;
+  newP.birthday = birthday;
+  newP.ssn = ssn;
+  return newP;
+}
 
 
 
@@ -169,5 +195,11 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 // Create a function called makeCard which takes in cardNumber, expirationDate, and securityCode to make a Credit Card object and returns that object so that whenever you invoke makeCard, you get a brand new credit card.
 
   //Code Here
-
+function makeCard (cardNumber, expirationDate, securityCode) {
+  var creditcard = {};
+  creditcard.cardNumber = cardNumber;
+  creditcard.expirationDate = expirationDate;
+  creditcard.securityCode = securityCode;
+  return creditcard;
+}
 
